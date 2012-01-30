@@ -3,11 +3,14 @@
 # -----------------------------------------------------------------------------
 export EDITOR='vim'
 export PIP_DOWNLOAD_CACHE="$HOME/.pip/cache"
+export EDITOR="$HOME/bin/mate -w"
+export PATH="/usr/local/bin:$PATH:/usr/local/Cellar/ruby/1.9.3-p0/bin"
+export PYTHONPATH="$PYTHONPATH:/usr/local/Cellar/opencv/2.3.1a/lib/python2.7/site-packages"
 
 # -----------------------------------------------------------------------------
 # virtualenv
 # -----------------------------------------------------------------------------
-export WORKON_HOME=~/Code/envs
+export WORKON_HOME=~/virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
 # -----------------------------------------------------------------------------
@@ -21,7 +24,7 @@ alias fn='find . -name'
 alias sb='source ~/.bashrc'
 alias f='fab'
 alias fv='fab -R vagrant'
-alias envs='cd ~/Code/envs'
+alias envs='cd ~/virtualenvs'
 # Recursive sed
 # alias s="find . -path './.git' -prune -o -type f -print0 | xargs -0 sed -i ''"
 alias s="find . -name '.git' -prune -o -type f -print0 | xargs -0 sed -i ''"
@@ -163,4 +166,7 @@ export PATH=$PATH:$HOME/.rvm/bin
 # -----------------------------------------------------------------------------
 # Project specific, if available
 # -----------------------------------------------------------------------------
+
 if [[ -s $HOME/.bashrc_local ]] ; then source $HOME/.bashrc_local ; fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
