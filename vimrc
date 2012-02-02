@@ -107,7 +107,7 @@ nnoremap <leader>ft Vatzf
 
 " Toggle whitespace characters
 nmap <leader>l :set list!<cr>
-
+set listchars=trail:_
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%79v.\+/
 
@@ -205,6 +205,8 @@ nmap <leader>f :ClearCtrlPCache<cr>
 " NERDtree
 autocmd vimenter * NERDTree
 
+let g:solarized_visibility = "high"
+
+syntax enable
 set background=dark
 colorscheme solarized
-syntax enable
