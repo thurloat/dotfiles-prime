@@ -53,6 +53,8 @@ set wildignore+=*.spl                            " compiled spelling word lists
 set wildignore+=*.sw?                            " Vim swap files
 set wildignore+=*.DS_Store?                      " OSX bullshitset wildignore+=.hg,.git,.svn
 set wildignore+=*.CACHE                          " django-compressor cache dir
+set wildignore+=*.jhw-cache                      " jasmine headless webkit cache directory
+set wildignore+=htmlcov                          " code coverage report output directory
 
 set cursorline
 set nojoinspaces
