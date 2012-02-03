@@ -202,9 +202,6 @@ nmap \ <Plug>CommentaryLine
 let g:ctrlp_working_path_mode = 0
 nmap <leader>f :ClearCtrlPCache<cr>
 
-" NERDtree
-autocmd vimenter * NERDTree
-
 let g:solarized_visibility = "high"
 
 syntax enable
