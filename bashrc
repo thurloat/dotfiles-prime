@@ -113,7 +113,6 @@ function lt {
 # -----------------------------------------------------------------------------
 
 export CLICOLOR=1
-export LSCOLORS=DxBAcxdxCxegedabagacBA
 
 # Prompt stuff
 export VIRTUAL_ENV_DISABLE_PROMPT=1
