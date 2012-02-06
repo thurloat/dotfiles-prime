@@ -83,5 +83,5 @@
 	path = vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
 [submodule "vim/bundle/zencoding"]
-    path = vim/bundle/zencoding
-    url = git://github.com/mattn/zencoding-vim.git
+	path = vim/bundle/zencoding
+	url = git@github.com:mattn/zencoding-vim
