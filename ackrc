@@ -1,2 +1,22 @@
+# Acky Settings
+###############################################################################
+
+# enable case sensitivity only if I use upper case letters
+--smart-case
+
+# follow symlinks
+--follow
+
+# Type Definitions
+###############################################################################
+
 --type-set=coffee=.coffee
---type-set=scss=.scss
+--type-set=scss=.scss,.sass
+--type-set=rst=.rst
+
+# Ignore Lists
+###############################################################################
+
+--ignore-dir=htmlcov
+--ignore-dir=_build
+
