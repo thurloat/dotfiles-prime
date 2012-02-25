@@ -4,7 +4,7 @@
 export EDITOR='vim'
 export PIP_DOWNLOAD_CACHE="$HOME/.pip/cache"
 export EDITOR="$HOME/bin/mate -w"
-export PATH="/usr/local/bin:$PATH:/usr/local/Cellar/ruby/1.9.3-p0/bin"
+export PATH="/usr/local/bin:$PATH:/usr/local/Cellar/ruby/1.9.3-p0/bin:$HOME/.cabal/bin"
 export PYTHONPATH="$PYTHONPATH:/usr/local/Cellar/opencv/2.3.1a/lib/python2.7/site-packages"
 
 # -----------------------------------------------------------------------------
@@ -36,6 +36,10 @@ function prettyjson() {
 }
 alias dv='dvtm -m "^f"'
 alias goawayswapfilesyouareswapfilesidontevenneedyou='rm ~/.vim/tmp/swap/*'
+
+function using_gcc() {
+  env CC="/usr/bin/gcc-4.2" ARCHFLAGS="-arch x86_64" ARCHS="x86_64" $*
+}
 
 # -----------------------------------------------------------------------------
 # Git
