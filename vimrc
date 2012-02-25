@@ -56,6 +56,9 @@ set wildignore+=*.CACHE                          " django-compressor cache dir
 set wildignore+=*.jhw-cache                      " jasmine headless webkit cache directory
 set wildignore+=htmlcov                          " code coverage report output directory
 
+" Two spaces to end a sentence
+set cpoptions+=J
+
 set cursorline
 set nojoinspaces
 
@@ -158,6 +161,9 @@ au Filetype rst nnoremap <buffer> <localleader>1 yypVr=
 au Filetype rst nnoremap <buffer> <localleader>2 yypVr-
 au Filetype rst nnoremap <buffer> <localleader>3 yypVr~
 au Filetype rst nnoremap <buffer> <localleader>4 yypVr`
+
+au Filetype markdown nnoremap <buffer> <localleader>1 yypVr=
+au Filetype markdown nnoremap <buffer> <localleader>2 yypVr-
 
 " Keep splits sized properly
 au VimResized * exe "normal! \<cw>="
