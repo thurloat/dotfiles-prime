@@ -91,3 +91,6 @@
 [submodule "vim/bundle/tomorrow-night"]
 	path = vim/bundle/tomorrow-night
 	url = git://github.com/ChrisKempson/Vim-Tomorrow-Theme.git
+[submodule "vim/bundle/vim-powerline"]
+	path = vim/bundle/vim-powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
