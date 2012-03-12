@@ -7,6 +7,12 @@ export EDITOR="$HOME/bin/mate -w"
 export PATH="/usr/local/bin:$PATH:/usr/local/Cellar/ruby/1.9.3-p0/bin:$HOME/.cabal/bin"
 export PYTHONPATH="$PYTHONPATH:/usr/local/Cellar/opencv/2.3.1a/lib/python2.7/site-packages"
 
+
+# -----------------------------------------------------------------------------
+# Atlassian SDK Stuff 
+# -----------------------------------------------------------------------------
+export PATH="$HOME/SDK/atlassian-plugin-sdk-3.8/bin:$PATH"
+
 # -----------------------------------------------------------------------------
 # virtualenv
 # -----------------------------------------------------------------------------
@@ -58,6 +64,11 @@ alias m='python manage.py'
 alias run='python manage.py runserver'
 alias sync='python manage.py syncdb'
 alias rrun="rm dev.db ; sync --noinput ; m migrate; m createsuperuser --user=honza --email=me@honza.ca; m runserver"
+
+# -----------------------------------------------------------------------------
+# Google Apps Deployment stuff 
+# -----------------------------------------------------------------------------
+alias gam="python ~/github/gam-2.2-python-src/gam.py"
 
 # -----------------------------------------------------------------------------
 # todo.txt
