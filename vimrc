@@ -18,7 +18,7 @@ call pathogen#runtime_append_all_bundles()
 let mapleader = ","
 let maplocalleader = "\\"
 
-set hidden
+" set hidden
 
 set nowrap        " don't wrap lines
 set tabstop=4     " a tab is four spaces
