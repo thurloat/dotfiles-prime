@@ -73,9 +73,6 @@
 [submodule "vim/bundle/ctrlp"]
 	path = vim/bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "vim/bundle/css-color"]
-	path = vim/bundle/css-color
-	url = git://github.com/ap/vim-css-color.git 
 [submodule "vim/bundle/matchtag"]
 	path = vim/bundle/matchtag
 	url = git://github.com/gregsexton/MatchTag.git
@@ -88,9 +85,6 @@
 [submodule "vim/bundle/haskell"]
 	path = vim/bundle/haskell
 	url = git://github.com/wlangstroth/vim-haskell.git
-[submodule "vim/bundle/tomorrow-night"]
-	path = vim/bundle/tomorrow-night
-	url = git://github.com/ChrisKempson/Vim-Tomorrow-Theme.git
 [submodule "vim/bundle/vim-powerline"]
 	path = vim/bundle/vim-powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
