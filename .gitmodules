@@ -91,3 +91,6 @@
 [submodule "vim/bundle/conque"]
 	path = vim/bundle/conque
 	url = git://github.com/vim-scripts/Conque-Shell.git
+[submodule "vim/bundles/css-color"]
+	path = vim/bundles/css-color
+	url = git://github.com/ap/vim-css-color.git
