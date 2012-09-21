@@ -1,6 +1,6 @@
+set shell=/bin/bash
 " Load pathogen
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
-
 set nocompatible
 
 set guioptions=aAce
