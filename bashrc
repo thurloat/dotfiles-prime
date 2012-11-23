@@ -7,7 +7,6 @@ export EDITOR="$HOME/bin/mate -w"
 export PATH="/usr/local/bin:$PATH:/usr/local/Cellar/ruby/1.9.3-p0/bin:$HOME/.cabal/bin"
 export PYTHONPATH="$PYTHONPATH:/usr/local/Cellar/opencv/2.3.1a/lib/python2.7/site-packages"
 
-
 # -----------------------------------------------------------------------------
 # Atlassian SDK Stuff 
 # -----------------------------------------------------------------------------
@@ -54,7 +53,7 @@ alias gitl='git log --pretty=format:"%h - %an, %ar : %s"'
 alias gits='clear; git status'
 alias gitchart="git shortlog --numbered --summary"
 alias gitg='git log --oneline --graph'
-alias gall='git submodule foreach git pull'
+alias gall='git submodule foreach git checkout master && git pull'
 
 # -----------------------------------------------------------------------------
 # Python & Django
@@ -146,7 +145,7 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1]/"
 }
 
-export PS1="[\$(rvm-prompt) \$(ve)] \w \$(parse_git_branch) $ "
+export PS1="[\$(ve)] \w \$(parse_git_branch) $ "
 
 # -----------------------------------------------------------------------------
 # Notifiers
