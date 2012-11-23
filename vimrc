@@ -218,4 +218,4 @@ let g:solarized_visibility = "high"
 
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme molokai
