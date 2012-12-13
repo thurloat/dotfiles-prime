@@ -180,7 +180,7 @@ fi
 # Stop telling me I have new mail
 unset MAILCHECK
 
-export SHELL=/usr/local/bin/bash
+export SHELL=/bin/bash
 export GREP_OPTIONS='--color=auto'
 
 export PATH=$PATH:$HOME/.rvm/bin
