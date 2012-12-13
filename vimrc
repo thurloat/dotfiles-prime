@@ -161,9 +161,10 @@ au Filetype rst nnoremap <buffer> <localleader>1 yypVr=
 au Filetype rst nnoremap <buffer> <localleader>2 yypVr-
 au Filetype rst nnoremap <buffer> <localleader>3 yypVr~
 au Filetype rst nnoremap <buffer> <localleader>4 yypVr`
-
+au Filetype rst set spell spelllang=en_ca
 au Filetype markdown nnoremap <buffer> <localleader>1 yypVr=
 au Filetype markdown nnoremap <buffer> <localleader>2 yypVr-
+au Filetype markdown set spell spelllang=en_ca
 
 " Keep splits sized properly
 au VimResized * exe "normal! \<cw>="
