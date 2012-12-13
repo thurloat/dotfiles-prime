@@ -208,6 +208,9 @@ nmap \ <Plug>CommentaryLine
 let g:ctrlp_working_path_mode = 0
 nmap <leader>f :ClearCtrlPCache<cr>
 
+" NerdTree
+let NERDTreeShowHidden = 1
+
 hi link coffeeObject NONE
 hi link coffeeBracket NONE
 hi link coffeeCurly NONE
