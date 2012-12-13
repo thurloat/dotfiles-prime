@@ -218,8 +218,11 @@ hi link coffeeCurly NONE
 hi link coffeeParen NONE
 hi link coffeeSpecialVar Identifier
 
+let coffee_linter = "/usr/local/bin/coffeelint"
 let g:solarized_visibility = "high"
+nmap <leader><C-w>l :CoffeeLint | cwindow
 
 syntax enable
 set background=dark
 colorscheme molokai
+
