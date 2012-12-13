@@ -29,6 +29,7 @@ alias sb='source ~/.bashrc'
 alias f='fab'
 alias fv='fab -R vagrant'
 alias envs='cd ~/virtualenvs'
+alias vim='mvim -v'
 # Recursive sed
 # alias s="find . -path './.git' -prune -o -type f -print0 | xargs -0 sed -i ''"
 alias s="find . -name '.git' -prune -o -type f -print0 | xargs -0 sed -i ''"
