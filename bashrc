@@ -53,7 +53,7 @@ alias gitl='git log --pretty=format:"%h - %an, %ar : %s"'
 alias gits='clear; git status'
 alias gitchart="git shortlog --numbered --summary"
 alias gitg='git log --oneline --graph'
-alias gall='git submodule foreach git checkout master && git pull'
+alias gall='git submodule foreach git '
 
 # -----------------------------------------------------------------------------
 # Python & Django
