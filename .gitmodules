@@ -85,9 +85,6 @@
 [submodule "vim/bundle/haskell"]
 	path = vim/bundle/haskell
 	url = git://github.com/wlangstroth/vim-haskell.git
-[submodule "vim/bundle/vim-powerline"]
-	path = vim/bundle/vim-powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
 [submodule "vim/bundles/css-color"]
 	path = vim/bundles/css-color
 	url = git://github.com/ap/vim-css-color.git
@@ -97,3 +94,6 @@
 [submodule "vim/bundle/jshint"]
 	path = vim/bundle/jshint
 	url = git://github.com/walm/jshint.vim.git
+[submodule "vim/bundle/powerline"]
+	path = vim/bundle/powerline
+	url = git://github.com/Lokaltog/powerline.git

@@ -1,10 +1,11 @@
 set shell=/bin/bash
 " Load pathogen
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
+source ~/.vim/bundle/powerline/powerline/ext/vim/source_plugin.vim
 set nocompatible
 
 set guioptions=aAce
-set guifont=Droid\ Sans\ Mono:h12
+set guifont=Droid\ Sans\ Mono\ for\ Powerline:h12
 set linespace=-2
 
 " Silence please
@@ -220,6 +221,7 @@ hi link coffeeSpecialVar Identifier
 
 let coffee_linter = "/usr/local/bin/coffeelint"
 let g:solarized_visibility = "high"
+" let g:Powerline_symbols = 'fancy'
 nmap <leader><C-w>l :CoffeeLint | cwindow
 
 syntax enable
