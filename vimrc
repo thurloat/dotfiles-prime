@@ -182,6 +182,9 @@ inoremap <C-u> <esc>gUiwea
 " Format
 nnoremap Q gqip
 
+" Start clipboard copy
+nnoremap <leader>c "+
+
 " vagrant
 au BufRead,BufNewFile Vagrantfile set ft=ruby
 
