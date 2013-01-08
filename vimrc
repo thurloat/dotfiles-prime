@@ -131,12 +131,10 @@ map <silent> <leader>V :source ~/.vimrc<CR>
 map <leader>b :vs ~/.bashrc<CR><C-W>
 
 au FileType javascript setlocal tabstop=2 shiftwidth=2
-
 au FileType coffee setlocal tabstop=2 shiftwidth=2
 
 au BufNewFile,BufRead *.html setlocal filetype=htmldjango
 au FileType htmldjango setlocal textwidth=0
-
 
 " Open help files in a vertical split
 au BufWinEnter *.txt if &ft == 'help' | wincmd L | endif
@@ -144,10 +142,10 @@ au BufWinEnter *.txt if &ft == 'help' | wincmd L | endif
 au BufNewFile,BufRead *.j setlocal filetype=objj
 let g:syntastic_enable_signs=1
 
-let g:snips_author="Honza Pokorny"
+let g:snips_author="Adam Thurlow"
 
 " Status line stuff
-set statusline=%F%m%r%h%w%=%{fugitive#statusline()}%y\[%l\/%L,%c]
+" set statusline=%F%m%r%h%w%=%{fugitive#statusline()}%y\[%l\/%L,%c]
 set laststatus=2
 
 set scrolloff=3
