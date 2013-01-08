@@ -1,4 +1,5 @@
 set shell=/bin/bash
+
 " Load pathogen
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 source ~/.vim/bundle/powerline/powerline/ext/vim/source_plugin.vim
@@ -20,7 +21,6 @@ let mapleader = ","
 let maplocalleader = "\\"
 
 " set hidden
-
 set nowrap        " don't wrap lines
 set tabstop=4     " a tab is four spaces
 set backspace=indent,eol,start
@@ -56,6 +56,10 @@ set wildignore+=*.DS_Store?                      " OSX bullshitset wildignore+=.
 set wildignore+=*.CACHE                          " django-compressor cache dir
 set wildignore+=*.jhw-cache                      " jasmine headless webkit cache directory
 set wildignore+=htmlcov                          " code coverage report output directory
+
+iabbrev SD Sheepdog
+iabbrev t@ thurloat@gmail.com
+iabbrev a@ adam@sheepdoginc.ca
 
 " Two spaces to end a sentence
 set cpoptions+=J
