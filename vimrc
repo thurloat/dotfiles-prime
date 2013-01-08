@@ -88,6 +88,7 @@ nnoremap k gk
 
 " Remap : to ;
 nnoremap ; :
+vnoremap ; :
 
 " Save on lose focus
 au FocusLost * :wa
