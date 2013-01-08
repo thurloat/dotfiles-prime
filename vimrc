@@ -221,10 +221,11 @@ hi link coffeeSpecialVar Identifier
 
 let coffee_linter = "/usr/local/bin/coffeelint"
 let g:solarized_visibility = "high"
-" let g:Powerline_symbols = 'fancy'
 nmap <leader><C-w>l :CoffeeLint | cwindow
 
 syntax enable
 set background=dark
-colorscheme molokai
+let g:badwolf_darkgutter = 1
+let g:badwolf_tabline = 0
+colorscheme badwolf 
 
