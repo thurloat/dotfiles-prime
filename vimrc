@@ -56,6 +56,8 @@ set wildignore+=*.DS_Store?                      " OSX bullshitset wildignore+=.
 set wildignore+=*.CACHE                          " django-compressor cache dir
 set wildignore+=*.jhw-cache                      " jasmine headless webkit cache directory
 set wildignore+=htmlcov                          " code coverage report output directory
+set wildignore+=build
+set wildignore+=node_modules
 
 iabbrev SD Sheepdog
 iabbrev t@ thurloat@gmail.com
