@@ -2,7 +2,6 @@ set shell=/bin/bash
 
 " Load pathogen
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
-source ~/.vim/bundle/powerline/powerline/ext/vim/source_plugin.vim
 set nocompatible
 
 set guioptions=aAce
