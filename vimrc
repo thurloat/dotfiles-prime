@@ -215,10 +215,12 @@ nmap \ <Plug>CommentaryLine
 
 " ctrlp
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_cache_dir = '~/.vim/tmp/ctrlp'
 nmap <leader>f :ClearCtrlPCache<cr>
 
 " NerdTree
-let NERDTreeShowHidden = 1
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeBookmarksFile = '~/.vim/bookmarks'
 
 hi link coffeeObject NONE
 hi link coffeeBracket NONE
