@@ -91,6 +91,9 @@ nnoremap k gk
 nnoremap ; :
 vnoremap ; :
 
+" If I actaully ever want to use a real tab...
+inoremap <S-Tab> <C-V><Tab>
+
 " Save on lose focus
 au FocusLost * :wa
 
