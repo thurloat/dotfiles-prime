@@ -46,6 +46,25 @@ function using_gcc() {
   env CC="/usr/bin/gcc-4.2" ARCHFLAGS="-arch x86_64" ARCHS="x86_64" $*
 }
 
+# named svn stashes.
+# ex: svn_stash foo -- stashes all changes in a patch named .stash-foo
+# ex2: svn_stash pop foo -- patches the foo stash back onto svn.
+function svn_stash() {
+if [ -z "$1" ]
+then
+    echo "Missing stash name argument"
+else
+    if [ "$1" == "pop" ]
+    then
+        local stashname=".stash-$2"
+        patch -p0 < $stashname; rm $stashname 
+    else
+        svn diff > .stash-$1; svn revert -R .
+    fi
+fi
+}
+
+
 # -----------------------------------------------------------------------------
 # Git
 # -----------------------------------------------------------------------------
