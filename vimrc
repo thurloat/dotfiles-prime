@@ -224,6 +224,7 @@ nmap <leader>f :ClearCtrlPCache<cr>
 " NerdTree
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeBookmarksFile = '~/.vim/bookmarks'
+let g:NERDTreeIgnore = ['\.pyc$', '\.DS_Store']
 
 hi link coffeeObject NONE
 hi link coffeeBracket NONE
