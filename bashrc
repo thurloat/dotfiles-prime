@@ -16,7 +16,7 @@ export PATH="$HOME/SDK/atlassian-plugin-sdk-3.8/bin:$PATH"
 # -----------------------------------------------------------------------------
 export WORKON_HOME=~/virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
-
+source ~/.s3_rc
 # -----------------------------------------------------------------------------
 # Shortcuts
 # -----------------------------------------------------------------------------
