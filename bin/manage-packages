@@ -1,19 +1,30 @@
 #!/usr/bin/python
 """
+Version 0.3
+
 Maintains simple cheeseshop on S3.
 Authored by David Wolfe davidgameswolfe@gmail.com based on
    http://honza.ca/2012/02/how-not-to-depend-on-pypi (Honza Pokorny)
 """
 
 # Requires installation of boto (works with version 2.5.2)
-BUCKET_NAME = 'XXX'
-AWS_SECRET_ACCESS_KEY = "XXX"
-AWS_ACCESS_KEY_ID = "XXX"
-CHEESESHOP_DIR = "XXX" # Sheep milk cheese...
-
-import argparse, tempfile, subprocess
+import argparse, tempfile, subprocess, shutil, os
 import boto
 from boto.s3.key import Key
+
+# Make sure you have these set up in your environment
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+
+# Non-sheepdoggers:  change to your bucket
+BUCKET_NAME = 'sheepdog-assets'
+CHEESESHOP_DIR = "feta" # Sheep milk cheese...
+
+def is_compressed(filename):
+    # Just a quick sanity check by filename.  Good enough.
+    return (filename[-3:] == '.gz'
+            or filename[-4:] in ('.tgz', '.zip'))
+
 
 def dispatch():
     """
@@ -38,7 +49,10 @@ def dispatch():
                                 help="Update cheeseshop with packages,"
                                 " and update index.")
     sub.set_defaults(func=upload_to_cheeseshop)
-    sub.add_argument('packages', metavar="PACKAGE_NAMES", nargs="*")
+    sub.add_argument('packages', metavar="PACKAGE_NAMES", nargs="*",
+                     help=('each package is a package name'
+                           ' (Django or Django==1.3.1) or a'
+                           ' path to a file (dir/Django-1.3.1.tgz)'))
     sub.add_argument('-r', '--requirement', type=file, metavar="FILENAME",
                      help=('assure packages in requirements file are present'
                            ', uploading from pypi as needed'))
@@ -79,8 +93,13 @@ def upload_to_cheeseshop(packages=[], requirement=None, upgrade=False):
 
     # Download all required packages into a temporary directory
     sreq = "-r %s" % requirement.name if requirement else ""
+    compiled_packages = [p for p in packages if is_compressed(p)]
+    packages = [p for p in packages if p not in compiled_packages]
     pkgs = " ".join(packages)
     subprocess.call("pip install -d %s %s %s" % (pypi, sreq, pkgs), shell=True)
+    for p in compiled_packages:
+        shutil.copy(p, pypi)
+
     result = subprocess.check_output('cd %s ; ls' % pypi, shell=True).strip()
 
     # Find out current packages
@@ -90,6 +109,7 @@ def upload_to_cheeseshop(packages=[], requirement=None, upgrade=False):
 
     for package in result.split("\n"):
         if "/" in package: continue # cd had output
+        if not is_compressed(package): continue # Junk file
         if not upgrade and package in packages:
             print "Package %s already in %s" % (package, CHEESESHOP_DIR)
             continue # Already uploaded
