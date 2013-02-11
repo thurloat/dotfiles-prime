@@ -150,6 +150,7 @@ let g:snips_author="Adam Thurlow"
 
 " Status line stuff
 " set statusline=%F%m%r%h%w%=%{fugitive#statusline()}%y\[%l\/%L,%c]
+nmap <leader>gs :Gstatus<CR>
 set laststatus=2
 
 set scrolloff=3
