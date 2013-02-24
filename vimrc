@@ -159,6 +159,21 @@ set scrolloff=3
 let g:tagbar_sort = 0
 let g:tagbar_ctags_bin="/usr/local/bin/ctags"
 nmap <leader>d :TagbarToggle<CR>
+let g:tagbar_type_scala = {
+    \ 'ctagstype' : 'Scala',
+    \ 'kinds'     : [
+        \ 'p:packages:1',
+        \ 'V:values',
+        \ 'v:variables',
+        \ 'T:types',
+        \ 't:traits',
+        \ 'o:objects',
+        \ 'a:aclasses',
+        \ 'c:classes',
+        \ 'r:cclasses',
+        \ 'm:methods'
+    \ ]
+    \ }
 
 " Don't displal manual
 nnoremap K <nop>
