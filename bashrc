@@ -3,11 +3,13 @@
 # -----------------------------------------------------------------------------
 export EDITOR='vim'
 export PIP_DOWNLOAD_CACHE="$HOME/.pip/cache"
-export PATH="/usr/local/bin:$PATH:/usr/local/Cellar/ruby/1.9.3-p0/bin:$HOME/.cabal/bin"
+export PATH="/usr/local/bin:$PATH:$HOME/.cabal/bin"
+export PATH="/usr/local/Cellar/go/1.0.3/bin/:$PATH"
 export PYTHONPATH="$PYTHONPATH:/usr/local/Cellar/opencv/2.3.1a/lib/python2.7/site-packages"
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 # -----------------------------------------------------------------------------
-# Atlassian SDK Stuff 
+# Atlassian SDK Stuff
 # -----------------------------------------------------------------------------
 export PATH="$HOME/SDK/atlassian-plugin-sdk-3.8/bin:$PATH"
 
