@@ -66,6 +66,20 @@ else
 fi
 }
 
+# Sync master branch with svn and push it
+function sync_master {
+  current_branch=$(git rev-parse --abbrev-ref HEAD)
+  changes_stashed=$(git stash)
+  git checkout master
+  git svn rebase
+  git push --force
+  git checkout $current_branch
+  if [ "$changes_stashed" != "No local changes to save" ]
+  then
+  git stash pop
+  fi
+}
+
 
 # -----------------------------------------------------------------------------
 # Git
@@ -84,9 +98,10 @@ alias m='python manage.py'
 alias run='python manage.py runserver'
 alias sync='python manage.py syncdb'
 alias rrun="rm dev.db ; sync --noinput ; m migrate; m createsuperuser --user=honza --email=me@honza.ca; m runserver"
+alias pipsheep='pip install -f https://s3.amazonaws.com/sheepdog-assets/feta/index.html --no-index'
 
 # -----------------------------------------------------------------------------
-# Google Apps Deployment stuff 
+# Google Apps Deployment stuff
 # -----------------------------------------------------------------------------
 alias gam="python ~/github/gam-2.2-python-src/gam.py"
 
