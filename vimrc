@@ -159,6 +159,7 @@ set scrolloff=3
 let g:tagbar_sort = 0
 let g:tagbar_ctags_bin="/usr/local/bin/ctags"
 nmap <leader>d :TagbarToggle<CR>
+map <C-w>t 99<C-w>l
 let g:tagbar_type_scala = {
     \ 'ctagstype' : 'Scala',
     \ 'kinds'     : [
