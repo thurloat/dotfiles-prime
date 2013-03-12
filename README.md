@@ -1,4 +1,15 @@
 dotfiles
 ========
 
-This is how I roll. It's mostly vim and bash config things.
+vimrc
+-----
+
+Makes vim unusable for anyone but me.
+
+
+bashrc
+------
+
+Lots of handy shortcuts, mostly for working with python, django, git and svn.
+
+
