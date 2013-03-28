@@ -32,6 +32,7 @@ alias f='fab'
 alias fv='fab -R vagrant'
 alias envs='cd ~/virtualenvs'
 alias vim='mvim -v'
+
 # Recursive sed
 # alias s="find . -path './.git' -prune -o -type f -print0 | xargs -0 sed -i ''"
 alias s="find . -name '.git' -prune -o -type f -print0 | xargs -0 sed -i ''"
@@ -229,3 +230,4 @@ export PATH=$PATH:$HOME/.rvm/bin
 if [[ -s $HOME/.bashrc_local ]] ; then source $HOME/.bashrc_local ; fi
 
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
