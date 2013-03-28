@@ -13,10 +13,10 @@
 --type-set=coffee=.coffee
 --type-set=scss=.scss,.sass
 --type-set=rst=.rst
+--type-set=markdown=.md,.markdown,.mdown
 
 # Ignore Lists
 ###############################################################################
 
 --ignore-dir=htmlcov
 --ignore-dir=_build
-
