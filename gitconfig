@@ -1,0 +1,16 @@
+[user]
+	name = Thurloat
+	email = thurloat@gmail.com
+[github]
+	user = thurloat
+[core]
+	excludesfile = ~/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[alias]
+    fuck = reset --hard HEAD
+    standup = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cD) %C(bold blue)<%an>%Creset' --since yesterday --author thurloat
+    pullr = pull --rebase
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
