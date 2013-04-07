@@ -228,6 +228,3 @@ export PATH=$PATH:$HOME/.rvm/bin
 # -----------------------------------------------------------------------------
 
 if [[ -s $HOME/.bashrc_local ]] ; then source $HOME/.bashrc_local ; fi
-
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
