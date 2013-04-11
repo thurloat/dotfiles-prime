@@ -1,5 +1,3 @@
-set shell=/bin/bash
-
 " Load pathogen
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 set nocompatible
@@ -19,7 +17,7 @@ call pathogen#incubate()
 let mapleader = ","
 let maplocalleader = "\\"
 
-" set hidden
+" Basic Configuration {{{ 
 set nowrap        " don't wrap lines
 set tabstop=4     " a tab is four spaces
 set backspace=indent,eol,start
@@ -34,13 +32,30 @@ set smartcase     " ignore case if search pattern is all lowercase,
                   "    case-sensitive otherwise
 set smarttab      " insert tabs on the start of a line according to
                   "    shiftwidth, not tabstop
+set expandtab
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 set textwidth=79  " wrap lines at 79 characters
 set relativenumber
 set autoread      " Reload the files if they changed on disk!
+set ruler
+set cursorline
+set nojoinspaces
+set cpoptions+=J  " Two spaces to end a sentence
 
-" wild menu completion
+set undodir=~/.vim/tmp/undo//     " undo files
+set backupdir=~/.vim/tmp/backup// " backups
+set directory=~/.vim/tmp/swap//   " swap files
+set backup                        " enable backups
+
+if has('mouse')
+    set mouse=a
+endif
+
+" Save on lose focus
+au FocusLost * :wa
+
+" wild menu completion {{{
 set wildmenu
 set wildmode=list:longest
 set wildignore+=.hg,.git,.svn                    " Version control
@@ -57,32 +72,30 @@ set wildignore+=*.jhw-cache                      " jasmine headless webkit cache
 set wildignore+=htmlcov                          " code coverage report output directory
 set wildignore+=build
 set wildignore+=node_modules
+" }}}
 
+" Abbreviations {{{ 
 iabbrev SD Sheepdog
 iabbrev t@ thurloat@gmail.com
-iabbrev a@ adam@sheepdoginc.ca
+iabbrev a@ adam.thurlow@sheepdog.com
+" }}}
 
-" Two spaces to end a sentence
-set cpoptions+=J
-
-set cursorline
-set nojoinspaces
-
-set undodir=~/.vim/tmp/undo//     " undo files
-set backupdir=~/.vim/tmp/backup// " backups
-set directory=~/.vim/tmp/swap//   " swap files
-set backup                        " enable backups
+" Folding {{{
+set foldlevelstart=0
+set foldmethod=marker
+nnoremap <Space> za
+vnoremap <Space> za
+nnoremap zO zCzO
+" }}}
 
 filetype on
 filetype plugin on
 filetype indent on
 filetype plugin indent on
 
-set expandtab
-
-if has('mouse')
-    set mouse=a
-endif
+" }}}
+"
+" Remaps {{{
 
 nnoremap j gj
 nnoremap k gk
@@ -93,9 +106,6 @@ vnoremap ; :
 
 " If I actaully ever want to use a real tab...
 inoremap <S-Tab> <C-V><Tab>
-
-" Save on lose focus
-au FocusLost * :wa
 
 " Run Python script through PEP8
 map <buffer> <leader>p :w<CR>:!pep8 % <CR>
@@ -124,33 +134,42 @@ set listchars=trail:_
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%79v.\+/
 
-" Diplay cursor position in bottom right corner
-set ruler
-
-" Editing .vimrc
+" Quick Edits 
 map <leader>v :vs ~/.vimrc<CR><C-W>
 map <silent> <leader>V :source ~/.vimrc<CR>
-
-" Editing .bashrc
 map <leader>b :vs ~/.bashrc<CR><C-W>
 
+nmap <leader>gs :Gstatus<CR>
+" }}}
+
+" Filetype Specifics {{{
 au FileType javascript setlocal tabstop=2 shiftwidth=2
 au FileType coffee setlocal tabstop=2 shiftwidth=2
 
 au BufNewFile,BufRead *.html setlocal filetype=htmldjango
 au FileType htmldjango setlocal textwidth=0
 
+au Filetype rst nnoremap <buffer> <localleader>1 yypVr=
+au Filetype rst nnoremap <buffer> <localleader>2 yypVr-
+au Filetype rst nnoremap <buffer> <localleader>3 yypVr~
+au Filetype rst nnoremap <buffer> <localleader>4 yypVr`
+au Filetype rst set spell spelllang=en_ca
+au Filetype markdown nnoremap <buffer> <localleader>1 yypVr=
+au Filetype markdown nnoremap <buffer> <localleader>2 yypVr-
+au Filetype markdown set spell spelllang=en_ca
+
+" }}}
+"
 " Open help files in a vertical split
 au BufWinEnter *.txt if &ft == 'help' | wincmd L | endif
 
 au BufNewFile,BufRead *.j setlocal filetype=objj
-let g:syntastic_enable_signs=1
 
+let g:syntastic_enable_signs=1
 let g:snips_author="Adam Thurlow"
 
 " Status line stuff
 " set statusline=%F%m%r%h%w%=%{fugitive#statusline()}%y\[%l\/%L,%c]
-nmap <leader>gs :Gstatus<CR>
 set laststatus=2
 
 set scrolloff=3
@@ -181,16 +200,6 @@ nnoremap K <nop>
 
 " Make vim able to edit crontab
 set backupskip=/tmp/*,/private/tmp/*"
-
-au Filetype rst nnoremap <buffer> <localleader>1 yypVr=
-au Filetype rst nnoremap <buffer> <localleader>2 yypVr-
-au Filetype rst nnoremap <buffer> <localleader>3 yypVr~
-au Filetype rst nnoremap <buffer> <localleader>4 yypVr`
-au Filetype rst set spell spelllang=en_ca
-au Filetype markdown nnoremap <buffer> <localleader>1 yypVr=
-au Filetype markdown nnoremap <buffer> <localleader>2 yypVr-
-au Filetype markdown set spell spelllang=en_ca
-
 " Keep splits sized properly
 au VimResized * exe "normal! \<cw>="
 
