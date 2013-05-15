@@ -103,3 +103,6 @@
 [submodule "vim/bundle/go.vim"]
 	path = vim/bundle/go.vim
 	url = git@github.com:fsouza/go.vim.git
+[submodule "vim/bundle/python-mode"]
+	path = vim/bundle/python-mode
+	url = git@github.com:klen/python-mode.git

@@ -5,6 +5,7 @@ export EDITOR='vim'
 export PIP_DOWNLOAD_CACHE="$HOME/.pip/cache"
 export PATH="/usr/local/bin:$PATH:$HOME/.cabal/bin"
 export PATH="/usr/local/Cellar/go/1.0.3/bin/:$PATH"
+export PATH="$HOME/dotfiles/bin:$PATH"
 export PYTHONPATH="$PYTHONPATH:/usr/local/Cellar/opencv/2.3.1a/lib/python2.7/site-packages"
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
@@ -228,3 +229,4 @@ export PATH=$PATH:$HOME/.rvm/bin
 # -----------------------------------------------------------------------------
 
 if [[ -s $HOME/.bashrc_local ]] ; then source $HOME/.bashrc_local ; fi
+
