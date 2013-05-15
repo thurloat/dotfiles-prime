@@ -124,6 +124,7 @@ nmap <silent> ,/ :nohlsearch<CR>
 
 " Strip all trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+nnoremap <leader>wr 078lbi<CR><ESC>0
 
 " HTML tag folding
 nnoremap <leader>ft Vatzf
@@ -139,7 +140,6 @@ map <leader>v :vs ~/.vimrc<CR><C-W>
 map <silent> <leader>V :source ~/.vimrc<CR>
 map <leader>b :vs ~/.bashrc<CR><C-W>
 
-nmap <leader>gs :Gstatus<CR>
 " }}}
 
 " Filetype Specifics {{{
@@ -149,14 +149,15 @@ au FileType coffee setlocal tabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.html setlocal filetype=htmldjango
 au FileType htmldjango setlocal textwidth=0
 
-au Filetype rst nnoremap <buffer> <localleader>1 yypVr=
-au Filetype rst nnoremap <buffer> <localleader>2 yypVr-
-au Filetype rst nnoremap <buffer> <localleader>3 yypVr~
-au Filetype rst nnoremap <buffer> <localleader>4 yypVr`
+au Filetype rst nnoremap <leader>1 yypVr=
+au Filetype rst nnoremap <leader>2 yypVr-
+au Filetype rst nnoremap <leader>3 yypVr~
+au Filetype rst nnoremap <leader>4 yypVr`
 au Filetype rst set spell spelllang=en_ca
 au Filetype markdown nnoremap <buffer> <localleader>1 yypVr=
 au Filetype markdown nnoremap <buffer> <localleader>2 yypVr-
 au Filetype markdown set spell spelllang=en_ca
+
 
 " }}}
 "
@@ -243,6 +244,7 @@ command! -nargs=* Only call CloseHiddenBuffers()
 nmap \ <Plug>CommentaryLine
 
 " ctrlp
+let g:ctrlp_dont_split = 'NERD_tree_2'
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_cache_dir = '~/.vim/tmp/ctrlp'
 nmap <leader>f :ClearCtrlPCache<cr>
@@ -251,6 +253,15 @@ nmap <leader>f :ClearCtrlPCache<cr>
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeBookmarksFile = '~/.vim/bookmarks'
 let g:NERDTreeIgnore = ['\.pyc$', '\.DS_Store']
+map <leader>n :NERDTreeToggle<CR>
+
+" Fugitive
+nmap <leader>gs :Gstatus<CR>
+nmap <leader>gd :Gdiff<CR>
+nmap <leader>gb :Gblame<CR>
+
+" Powerline
+let g:Powerline_cache_enabled = 1
 
 hi link coffeeObject NONE
 hi link coffeeBracket NONE
@@ -259,7 +270,6 @@ hi link coffeeParen NONE
 hi link coffeeSpecialVar Identifier
 
 let coffee_linter = "/usr/local/bin/coffeelint"
-let g:solarized_visibility = "high"
 nmap <leader><C-w>l :CoffeeLint | cwindow
 
 syntax enable
@@ -268,3 +278,6 @@ let g:badwolf_darkgutter = 1
 let g:badwolf_tabline = 0
 colorscheme badwolf 
 
+" python-mode
+let g:pymode_virtualenv = 1
+nmap <leader>@ :PyLintAuto<CR>
