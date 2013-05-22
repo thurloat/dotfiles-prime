@@ -124,7 +124,7 @@ nmap <silent> ,/ :nohlsearch<CR>
 
 " Strip all trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-nnoremap <leader>wr 078lbi<CR><ESC>0
+nnoremap <leader>wr 078lBi<CR><ESC>0
 
 " HTML tag folding
 nnoremap <leader>ft Vatzf
