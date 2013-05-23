@@ -281,4 +281,5 @@ colorscheme badwolf
 
 " python-mode
 let g:pymode_virtualenv = 1
+let g:pymode_folding = 0 
 nmap <leader>@ :PyLintAuto<CR>
