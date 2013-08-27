@@ -111,6 +111,10 @@ inoremap <S-Tab> <C-V><Tab>
 " Run Python script through PEP8
 map <buffer> <leader>p :w<CR>:!pep8 % <CR>
 
+" Python Rope
+noremap <C-c>r :RopeRename<CR>
+noremap <C-c>i :RopeAutoImport<CR>
+
 " Easy window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
