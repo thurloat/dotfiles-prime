@@ -70,9 +70,6 @@
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
-[submodule "vim/bundle/zencoding"]
-	path = vim/bundle/zencoding
-	url = git@github.com:mattn/zencoding-vim
 [submodule "vim/bundle/haskell"]
 	path = vim/bundle/haskell
 	url = git://github.com/wlangstroth/vim-haskell.git
@@ -94,3 +91,6 @@
 [submodule "vim/bundle/python-mode"]
 	path = vim/bundle/python-mode
 	url = git@github.com:klen/python-mode.git
+[submodule "vim/bundle/emmet-vim"]
+	path = vim/bundle/emmet-vim
+    url = https://github.com/mattn/emmet-vim.git
