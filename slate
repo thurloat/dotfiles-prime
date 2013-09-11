@@ -2,7 +2,7 @@ alias hyper ctrl;shift;alt;cmd
 
 bind t:${hyper} focus 'iTerm'
 bind c:${hyper} focus 'Google Chrome'
-bind e:${hyper} focus 'Eclipse'
+bind e:${hyper} focus 'Evernote'
 bind i:${hyper} focus 'Textual'
 bind v:${hyper} focus 'MacVim'
 bind p:${hyper} focus 'PyCharm'
