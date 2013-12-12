@@ -73,6 +73,7 @@ set wildignore+=*.jhw-cache                      " jasmine headless webkit cache
 set wildignore+=htmlcov                          " code coverage report output directory
 set wildignore+=build
 set wildignore+=node_modules
+set wildignore+=CACHE
 set wildignore+=static_collected                 " django's compiled static dir
 " }}}
 
