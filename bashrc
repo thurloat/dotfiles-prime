@@ -46,6 +46,23 @@ function prettyjson() {
 alias dv='dvtm -m "^f"'
 alias goawayswapfilesyouareswapfilesidontevenneedyou='rm ~/.vim/tmp/swap/*'
 
+# -----------------------------------------------------------------------------
+# Dealing with OpenStack 
+# -----------------------------------------------------------------------------
+alias Tl='testrepository_list_tests'
+alias Tr='testrepository_run_tests'
+
+function testrepository_list_tests() {
+    # List tests, and send to temp file.
+    testr list-tests $1 > /tmp/testrepository_list 
+}
+
+function testrepository_run_tests() {
+    # Runs listed tests from temp file.
+    python -m testtools.run discover --load-list /tmp/testrepository_list 
+}
+
+# Homebrew Hack
 function using_gcc() {
   env CC="/usr/bin/gcc-4.2" ARCHFLAGS="-arch x86_64" ARCHS="x86_64" $*
 }
