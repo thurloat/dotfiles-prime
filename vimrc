@@ -288,4 +288,11 @@ colorscheme badwolf
 " python-mode
 let g:pymode_virtualenv = 1
 let g:pymode_folding = 0 
-nmap <leader>@ :PyLintAuto<CR>
+let g:pymode_utils_whitespaces = 0
+let g:pymode_trim_whitespaces = 1
+let g:pymode_rope_complete_on_dot = 0
+let g:pymode_lint_unmodified = 0
+let g:pymode_lint_ignore = "E301"
+let g:pymode_lint_on_fly = 1
+
+nmap <leader>@ :PymodeLintAuto<CR>
