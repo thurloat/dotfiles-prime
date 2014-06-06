@@ -1,4 +1,5 @@
-" Load pathogen
+" Loadder pathogen
+
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 set nocompatible
 
@@ -11,7 +12,7 @@ set vb
 set t_vb=
 
 " Pathogen
-call pathogen#incubate()
+call pathogen#infect('bundle/{}')
 
 " Change the leader to ,
 let mapleader = ","
@@ -151,9 +152,11 @@ map <leader>b :vs ~/.bashrc<CR><C-W>
 
 " Filetype Specifics {{{
 au FileType javascript setlocal tabstop=2 shiftwidth=2
+let g:syntastic_javascript_checkers = ['jslint', 'gjslint']
 au FileType coffee setlocal tabstop=2 shiftwidth=2
 
 au BufNewFile,BufRead *.html setlocal filetype=htmldjango
+au BufNewFile,BufRead *.soy setlocal filetype=htmldjango
 au FileType htmldjango setlocal textwidth=0
 
 au Filetype rst nnoremap <leader>1 yypVr=
