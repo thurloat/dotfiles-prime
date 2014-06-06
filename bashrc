@@ -8,6 +8,8 @@ export PATH="/usr/local/Cellar/go/1.0.3/bin/:$PATH"
 export PATH="$HOME/dotfiles/bin:$PATH"
 export PYTHONPATH="$PYTHONPATH:/usr/local/Cellar/opencv/2.3.1a/lib/python2.7/site-packages"
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+export ARCHFLAGS="-Wno-error=unused-command-line-argument-hard-error-in-future"
+
 
 # -----------------------------------------------------------------------------
 # Atlassian SDK Stuff
