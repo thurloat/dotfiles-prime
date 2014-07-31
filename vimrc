@@ -4,7 +4,7 @@ source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 set nocompatible
 
 set guioptions=aAce
-set guifont=Droid\ Sans\ Mono\ for\ Powerline:h12
+set guifont=Droid\ Sans\ Mono:h12
 set linespace=-2
 
 " Silence please
@@ -187,7 +187,7 @@ set scrolloff=3
 
 " tagbar
 let g:tagbar_sort = 0
-let g:tagbar_ctags_bin="/usr/local/bin/ctags"
+let g:tagbar_ctags_bin="/bin/ctags"
 nmap <leader>d :TagbarToggle<CR>
 map <C-w>t 99<C-w>l
 let g:tagbar_type_scala = {
@@ -283,10 +283,11 @@ let coffee_linter = "/usr/local/bin/coffeelint"
 nmap <leader><C-w>l :CoffeeLint | cwindow
 
 syntax enable
-set background=dark
-let g:badwolf_darkgutter = 1
-let g:badwolf_tabline = 0
-colorscheme badwolf 
+set background=light
+" let g:badwolf_darkgutter = 1
+" let g:badwolf_tabline = 0
+colorscheme lucius 
+LuciusWhite
 
 " python-mode
 let g:pymode_virtualenv = 1
