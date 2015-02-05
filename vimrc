@@ -284,10 +284,10 @@ nmap <leader><C-w>l :CoffeeLint | cwindow
 
 syntax enable
 set background=light
-" let g:badwolf_darkgutter = 1
-" let g:badwolf_tabline = 0
-colorscheme lucius 
-LuciusWhite
+let g:badwolf_darkgutter = 1
+let g:badwolf_tabline = 0
+colorscheme badwolf
+" LuciusWhite
 
 " python-mode
 let g:pymode_virtualenv = 1
