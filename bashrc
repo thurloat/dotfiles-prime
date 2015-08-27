@@ -68,6 +68,7 @@ alias gall='git submodule foreach git '
 # -----------------------------------------------------------------------------
 # Python & Django
 # -----------------------------------------------------------------------------
+export PYTHONIOENCODING=utf-8
 alias rmpyc='find . -name "*.pyc" -exec rm {} \;'
 alias m='python manage.py'
 
@@ -111,3 +112,9 @@ export GREP_OPTIONS='--color=auto'
 # -----------------------------------------------------------------------------
 
 if [[ -s $HOME/.bashrc_local ]] ; then source $HOME/.bashrc_local ; fi
+
+export TERM=xterm-256color
+source /usr/local/bin/virtualenvwrapper.sh
+
+alias grep="grep $GREP_OPTIONS"
+unset GREP_OPTIONS
