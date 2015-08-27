@@ -79,9 +79,9 @@ set wildignore+=static_collected                 " django's compiled static dir
 " }}}
 
 " Abbreviations {{{ 
-iabbrev SD Sheepdog
+iabbrev CA Cloud-A
 iabbrev t@ thurloat@gmail.com
-iabbrev a@ adam.thurlow@sheepdog.com
+iabbrev a@ adam@clouda.ca
 " }}}
 
 " Folding {{{
