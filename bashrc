@@ -1,14 +1,9 @@
 # .bashrc
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
-
 # -----------------------------------------------------------------------------
 # Environment
 # -----------------------------------------------------------------------------
-export EDITOR='vim'
+export EDITOR='vim.gnome'
 export PIP_DOWNLOAD_CACHE="$HOME/.pip/cache"
 export PATH="$HOME/dotfiles/bin:$PATH"
 
@@ -28,6 +23,7 @@ alias fn='find . -name'
 alias sb='source ~/.bashrc'
 alias f='fab'
 alias envs='cd ~/.virtualenvs'
+alias vim='vim.gnome'
 
 # Recursive sed
 # alias s="find . -path './.git' -prune -o -type f -print0 | xargs -0 sed -i ''"
